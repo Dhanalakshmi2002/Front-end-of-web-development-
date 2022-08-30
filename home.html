@@ -1,54 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>	Login</title>
-    <link rel="stylesheet" href="style2.css">
-   
-</head>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.mySlides {display:none;}
+</style>
+<body style="background-color:#D87093;">
+
+</body>
 <body>
 
-    <div class="full-page">
-        <div class="sub-page">
-            <div class="navigation-bar">
-                <div class="logo">
-                 
-             
-            </div>
-            <div class="row">
-                <div class="col-1">
-                    <div class="form-box">
-                        <div class="form">
-                            <form class="login-form">
-                                <center><h1 class="main-heading">Login Form</h1></center>
-				                <input type="text"placeholder="user name"/>
-				                <input type="password"placeholder="password"/>
-				                <button>LOGIN</button>
-				                <p class="message">Not Registered? <a href="#">Register</a></p>
-				            </form>
-                            <form class="register-form">
-                                <center><h1 class="main-heading">Register Form</h1></center>
-				                <input type="text" placeholder="user name"/>
-				                <input type="text" placeholder="email-id"/>
-				                <input type="password" placeholder="password"/>
-				                <button>REGISTER</button>
-				                <p class="message">Already Registered?<a href="#">Login</a>
-				                </p>
-                                       
-				            </form>
-			             </div>
-	                </div>
-                </div>
-                <div class="col-1">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
-    </script>
-    <script>
-        $('.message a').click(function(){$('form').animate({height: "toggle",opacity: "toggle"},"slow");});
-    </script>
+<div class="w3-container">
+
+</div>
+<center>
+<div class="w3-content w3-section" style="max-width:770px">
+  <img class="mySlides w3-animate-top" src="C:\Users\SARANPAVIBALA\Downloads\pexels-pixabay-533982.jpg" style="width:100%">
+  <img class="mySlides w3-animate-bottom" src="E:\PaviDhana\Dhana\website\grapes crop.jpg" style="width:100%">
+  <img class="mySlides w3-animate-top" src="E:\PaviDhana\Dhana\website\pomengate crop.jpg" style="width:90%">
+  <img class="mySlides w3-animate-bottom" src="E:\PaviDhana\Dhana\website\mazie crop.jpg"style="width:100%">
+</center>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2500);    
+}
+</script>
+
 </body>
 </html>
